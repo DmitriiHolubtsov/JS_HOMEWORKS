@@ -1,1 +1,3 @@
-### HOMEWORK #1
+### HOMEWORK #7
+
+# 3 tasks
