@@ -1,1 +1,3 @@
-### HOMEWORK #1
+### HOMEWORK #6
+
+# Numbers and Strings
