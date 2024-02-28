@@ -6,9 +6,19 @@
 </head>
 <body>
 
-<p>Some content here...</p>
-<p>Some content here...</p>
-<p>Some content here...</p>
+<div>
+    <label for="degreeInput">Degree value:</label>
+    <input id="degreeInput" type="text">
+
+    <label for="degreeType">Convert to</label>
+    <select id="degreeType">Converter
+        <option value="C">C</option>
+        <option value="F">F</option>
+    </select>
+    <button onclick="calculateDegree()" type="button" id="calcButton">Convert</button>
+    <div>Result:</div>
+    <div id="degreeResult"></div>
+</div>
 
 <script src="./js/script.js"></script>
 </body>
