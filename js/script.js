@@ -20,13 +20,13 @@ const getValue = prompt("Please, enter degrees:");
 const getType = prompt("Please, enter 'C' - celsius or 'F' - fahrenheit ").toLowerCase();
 
 if (getType === "c") {
-    // far => cel
-    const calcCelsius = (getValue - 32) * 5/9;
-    alert(`${calcCelsius} C`);
-} else if (getType === "f") {
     // cel => far
     const calcFahrenheit = (+getValue * 9/5) + 32;
     alert(`${calcFahrenheit} F`);
+    // far => cel
+} else if (getType === "f") {
+    const calcCelsius = (getValue - 32) * 5/9;
+    alert(`${calcCelsius} C`);
 }
 
 // Third variant
