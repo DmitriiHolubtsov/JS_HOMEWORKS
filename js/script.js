@@ -1,35 +1,26 @@
 'use strict';
 
 // First variant
-// far => cel
-const getFahrenheitValue = prompt("Convert fahrenheit into celsius?");
-if (getFahrenheitValue) {
-    const calcCelsius = (getFahrenheitValue - 32) * 5/9;
-    alert(`${calcCelsius} C`);
+const getValue = Number(prompt("Please, enter degrees:"));
+
+if (!isNaN(getValue)) {
+    const getType = prompt("Please, enter 'C' - celsius or 'F' - fahrenheit ").toLowerCase();
+
+    if (getType === "c") {
+        // cel => far
+        const calcFahrenheit = (+getValue * 9/5) + 32;
+        alert(`${calcFahrenheit} F`);
+    } else if (getType === "f") {
+        // far => cel
+        const calcCelsius = (getValue - 32) * 5/9;
+        alert(`${calcCelsius} C`);
+    }
+} else {
+    alert("Wrong value.");
 }
 
-// cel => far
-const getCelsiusValue = prompt("Convert celsius into fahrenheit?");
-if (getCelsiusValue) {
-    const calcFahrenheit = (getCelsiusValue * 9/5) + 32;
-    alert(`${calcFahrenheit} F`);
-}
 
-//Second variant
-const getValue = prompt("Please, enter degrees:");
-const getType = prompt("Please, enter 'C' - celsius or 'F' - fahrenheit ").toLowerCase();
-
-if (getType === "c") {
-    // cel => far
-    const calcFahrenheit = (+getValue * 9/5) + 32;
-    alert(`${calcFahrenheit} F`);
-    // far => cel
-} else if (getType === "f") {
-    const calcCelsius = (getValue - 32) * 5/9;
-    alert(`${calcCelsius} C`);
-}
-
-// Third variant
+// Second variant (with inputs and select)
 const degreeInput = document.getElementById('degreeInput');
 const degreeType = document.getElementById('degreeType');
 const degreeResult = document.getElementById('degreeResult');
