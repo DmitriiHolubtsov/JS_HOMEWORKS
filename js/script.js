@@ -39,8 +39,7 @@ const calculateDegree = () => {
         //far > cel
         const calcCel = (degreeInput.value - 32) * 5/9;
         degreeResult.innerHTML = `<span>${calcCel} C</span>`;
-    }
-    else if (degreeType.value === "F") {
+    } else if (degreeType.value === "F") {
         //cel > far
         const calcFar = (degreeInput.value * 9/5) + 32;
         degreeResult.innerHTML = `<span>${calcFar} F</span>`;
