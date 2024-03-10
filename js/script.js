@@ -53,7 +53,7 @@ if(!isNaN(+sideA) && !isNaN(+sideB) && !isNaN(+sideC)) {
         console.log(`C and A > C : ${sideA} ${sideB} ${sideC}`);
         alert(`You have entered valid length of all 3 sides of your triangle! All is ok!`);
     } else {
-        console.log(`not valid ${sideA} ${sideB} ${sideC}`)
+        console.log(`not valid ${sideA} ${sideB} ${sideC}`);
         alert(`You have not entered valid length of sides. Your triangle is not right!`);
     }
 } else {
