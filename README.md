@@ -1,1 +1,3 @@
-### HOMEWORK #1
+### HOMEWORK #24
+
+# Cycles and Arrays
