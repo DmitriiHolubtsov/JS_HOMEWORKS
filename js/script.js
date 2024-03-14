@@ -8,13 +8,9 @@ const generateResult = function calcNumber(number, raisedNumber = 1) {
         const result = number ** raisedNumber;
         return result;
     } else {
-        throw new Error('Your value is not a number!');
+        return 'Your value is not a number!';
     }
 }
 
-try {
-    const calcResult = generateResult(number, raisedNumber);
-    console.log(calcResult);
-} catch (error) {
-    console.error(error.message);
-}
+console.log(generateResult(number, raisedNumber));
+
