@@ -11,5 +11,5 @@ const generationResult = function generateKey(length, characters) {
     return calcResult;
 }
 
-const calcResult = generationResult(length, characters);
-console.log('Result: ', calcResult);
+const result = generationResult(length, characters);
+console.log('Result: ', result);
