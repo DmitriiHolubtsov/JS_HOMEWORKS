@@ -6,7 +6,7 @@
   "scripts": {
     "test": "no",
     "format": "prettier --write \"js/**/*.js\"",
-    "lint-check": "eslint js/script.js\n"
+    "lint-check": "eslint js/script.js"
   },
   "repository": {
     "type": "git",
