@@ -5,7 +5,8 @@
   "main": "1.00",
   "scripts": {
     "test": "no",
-    "format": "prettier --write \"js/**/*.js\""
+    "format": "prettier --write \"js/**/*.js\"",
+    "lint-check": "eslint js/script.js\n"
   },
   "repository": {
     "type": "git",
