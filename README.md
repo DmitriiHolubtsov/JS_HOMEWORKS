@@ -1,1 +1,3 @@
-### HOMEWORK #1
+### HOMEWORK #52
+
+# Find factorial function
