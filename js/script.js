@@ -9,11 +9,9 @@ const flattenArr = (arr) => {
 
   const flattenHelper = (subArr) => {
     for (let i = 0; i < subArr.length; i++) {
-      if (Array.isArray(subArr[i])) {
-        flattenHelper(subArr[i]);
-      } else {
-        result.push(subArr[i]);
-      }
+      Array.isArray(subArr[i])
+        ? flattenHelper(subArr[i])
+        : result.push(subArr[i]);
     }
   };
 
