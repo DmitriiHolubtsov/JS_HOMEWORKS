@@ -1,13 +1,23 @@
-const getSum = function () {
-  let num = 0;
-  return function (a) {
-    num += a;
-    return num;
+(function () {
+
+  const getSum = function (value) {
+    let num = value;
+    return function (number) {
+      num += number;
+      return num;
+    };
   };
-};
 
-const sum = getSum();
+  const sum = getSum(10);
 
-console.log(sum(3));
-console.log(sum(10));
-console.log(sum(10));
+  console.log(sum(3));
+  console.log(sum(10));
+  console.log(sum(10));
+
+})();
+
+
+
+
+
+
