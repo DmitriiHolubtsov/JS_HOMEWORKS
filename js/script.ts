@@ -12,7 +12,7 @@ console.log(isCompleted && false);
 // null
 const n: null = null;
 console.log(n);
-// Undfined
+// Undefined
 const u: undefined = undefined;
 console.log(u);
 // object
@@ -24,7 +24,7 @@ console.log(someArr);
 // never
 let never: never;
 console.log(never);
-// unknow
+// unknown
 const unknownThing: unknown = "unknown";
 console.log(unknownThing);
 
@@ -33,7 +33,7 @@ interface User {
     name: string;
     age: number;
     hobbies: string[];
-};
+}
 
 const userObject: User = {
     name: 'Alex',
@@ -56,7 +56,7 @@ enum WeekDay {
     Friday,
     Saturday,
     Sunday
-};
+}
 
 let currentWeekday: WeekDay = WeekDay.Wednesday;
 console.log("Today is", WeekDay[currentWeekday]);
