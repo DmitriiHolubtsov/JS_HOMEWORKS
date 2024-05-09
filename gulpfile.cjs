@@ -29,6 +29,7 @@ async function buildStyles() {
 
 exports.buildStyles = buildStyles;
 
+// Gulp Watch
 exports.default = async function() {
     gulp.watch(`./${APP}/scss/**/*.scss`, gulp.series(buildStyles));
 };
