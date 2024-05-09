@@ -1,3 +1,3 @@
-### HOMEWORK #45
+### HOMEWORK #46
 
-# Gulp V1
+# Gulp V2 - Globs templates
