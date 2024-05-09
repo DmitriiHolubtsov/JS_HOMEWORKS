@@ -1,0 +1,1 @@
+{"version":3,"sources":["../components/header/header.scss"],"names":[],"mappings":"AAGI,eACE,WAAA,QACA,MAAA","file":"home-page.min.css","sourcesContent":["@import '../../common/variables';\n\nheader {\n    .navbar {\n      background: lightgreen;\n      color: $red;\n    }\n  }"]}

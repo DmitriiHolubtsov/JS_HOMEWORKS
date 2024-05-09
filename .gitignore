@@ -1,6 +1,7 @@
 .idea
 node_modules
 .vs_code
+.vscode
 .DStore
 .idea/
 package-lock.json
