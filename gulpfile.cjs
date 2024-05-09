@@ -1,34 +1,67 @@
 'use strict';
 
-const APP = 'layout-project';
-let gulp = require('gulp');
-let sass = require('gulp-sass')(require('sass'));
-let cleanCSS = require('gulp-clean-css');
-let rename = require('gulp-rename');
-let sourcemaps = require('gulp-sourcemaps');
+const gulp = require('gulp');
+const sass = require('gulp-sass')(require('sass'));
+const cleanCSS = require('gulp-clean-css');
+const rename = require('gulp-rename');
+const sourcemaps = require('gulp-sourcemaps');
+const concat = require('gulp-concat');
+const uglify = require('gulp-uglify');
 
+// Compile Sass into CSS
 async function buildStyles() {
     const autoprefixerModule = await import('gulp-autoprefixer');
     const autoprefixer = autoprefixerModule.default;
 
-    return gulp.src(`./${APP}/scss/pages/*.scss`)
+    return gulp.src('./layout-project/scss/pages/*.scss')
         .pipe(sourcemaps.init())
         .pipe(sass({
             includePaths: ['node_modules'],
         }).on('error', sass.logError))
         .pipe(autoprefixer('last 3 versions'))
-        .pipe(
-            // Optional if you want to see not minified CSS file
-            gulp.dest(`./${APP}/styles`)
-        )
+        .pipe(gulp.dest('./layout-project/build/styles'))
         .pipe(cleanCSS({compatibility: 'ie8'}))
         .pipe(rename({suffix: '.min'}))
-        .pipe(sourcemaps.write(`./`))
-        .pipe(gulp.dest(`./${APP}/styles`));
+        .pipe(sourcemaps.write('./'))
+        .pipe(gulp.dest('./layout-project/build/styles'));
 }
 
-exports.buildStyles = buildStyles;
+// Build JS
+async function buildJS() {
 
-exports.default = async function() {
-    gulp.watch(`./${APP}/scss/**/*.scss`, gulp.series(buildStyles));
-};
+    return gulp.src('./layout-project/js/*.js')
+        .pipe(concat('bundle.js'))
+        .pipe(uglify())
+        .pipe(gulp.dest('./layout-project/build/js'));
+}
+
+// Optimize images
+async function optimizeImages() {
+    const imageminModule = await import('gulp-imagemin');
+    const imagemin = imageminModule.default;
+
+    return gulp.src('./layout-project/assets/images/*')
+        .pipe(imagemin())
+        .pipe(gulp.dest('./layout-project/build/assets/images'));
+}
+
+// Copy index.html to build folder
+function copyIndexHtml() {
+    return gulp.src('./layout-project/index.html')
+        .pipe(gulp.dest('./layout-project/build'));
+}
+
+// Watch for changes in source files
+function watch() {
+    gulp.watch('./layout-project/scss/**/*.scss', buildStyles);
+    gulp.watch('./layout-project/js/**/*.js', buildJS);
+    gulp.watch('./layout-project/assets/images/*', optimizeImages);
+    gulp.watch('index.html', copyIndexHtml);
+}
+
+// Export tasks
+exports.default = gulp.series(gulp.parallel(buildStyles, buildJS, optimizeImages, copyIndexHtml), watch);
+exports.buildStyles = buildStyles;
+exports.buildJS = buildJS;
+exports.optimizeImages = optimizeImages;
+exports.watch = watch;

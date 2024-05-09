@@ -1,3 +1,3 @@
-### HOMEWORK #46
+### HOMEWORK #47
 
-# Gulp V2 - Globs templates
+# Gulp V3 - Export Functions
