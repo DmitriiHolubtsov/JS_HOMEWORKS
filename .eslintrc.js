@@ -21,7 +21,7 @@ module.exports = {
     ecmaVersion: 'latest',
   },
   rules: {
-    "no-console": "off",
-    "no-plusplus": "off",
+    'no-console': 'off',
+    'no-plusplus': 'off',
   },
 };
