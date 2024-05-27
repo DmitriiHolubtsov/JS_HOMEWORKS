@@ -1,0 +1,15 @@
+.item {
+    display: flex;
+    justify-content: space-between;
+    padding: 10px;
+    margin: 10px 0;
+    border: 1px solid #ccc;
+}
+
+.item.favorite {
+    background-color: #3bff6c;
+}
+
+.favoriteBtn {
+    padding: 5px 10px;
+}
