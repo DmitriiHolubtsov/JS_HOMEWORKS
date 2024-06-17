@@ -3,6 +3,7 @@
   "version": "1.0.0",
   "description": "Homework",
   "main": "1.00",
+  "type": "module",
   "scripts": {
     "test": "no",
     "format": "prettier --write \"js/**/*.js\"",
