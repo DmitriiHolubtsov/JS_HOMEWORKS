@@ -3,6 +3,10 @@ module.exports = {
     browser: true,
     es2021: true,
   },
+  'max-classes-per-file': [
+    'error',
+    { ignoreExpressions: true, max: 10 },
+  ],
   extends: 'airbnb-base',
   overrides: [
     {
@@ -21,7 +25,7 @@ module.exports = {
     ecmaVersion: 'latest',
   },
   rules: {
-    "no-console": "off",
-    "no-plusplus": "off",
+    'no-console': 'off',
+    'no-plusplus': 'off',
   },
 };
