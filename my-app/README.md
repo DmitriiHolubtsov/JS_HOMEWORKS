@@ -1,3 +1,3 @@
-### HOMEWORK #77
+### HOMEWORK #78
 
-## React. Creating component V1
+## React. Creating component V2
