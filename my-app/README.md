@@ -1,3 +1,3 @@
-### HOMEWORK #78
+### HOMEWORK #79
 
-## React. Creating component V2
+## React. Working with Collections.
