@@ -41,6 +41,11 @@
       }
     ],
     "react/jsx-indent": ["error", 2],
-    "eol-last": ["error", {"functions": "ignore"}],
+    "eol-last": [
+      "error", 
+      {
+        "functions": "ignore"
+        }
+      ]
   }
 }
