@@ -1,15 +1,16 @@
 import React from 'react';
-import DefinitionsList from './components/Definitions';
-
-const definitions = [
-  { dt: 'one', dd: 'two', id: 1 },
-  { dt: 'another term', dd: 'another description', id: 2 },
-  { dt: 'Coffee', dd: 'Black hot drink', id: 3 },
-  { dt: 'Milk', dd: 'White cold drink', id: 4 }
-];
+import 'bootstrap/dist/css/bootstrap.min.css';
+import ListGroup from './components/ListGroup';
 
 function App() {
-  return <DefinitionsList data={definitions} />;
+  return (
+    <div className="container mt-4">
+      <h1>List Group</h1>
+      <ListGroup>
+        <p>one</p>
+        <p>two</p>
+      </ListGroup>
+    </div>
+  );
 }
-
 export default App;
